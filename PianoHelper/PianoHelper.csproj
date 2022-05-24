@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DBC6CD2-39BB-4582-A730-BEC47F1D2137}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PianoHelper</RootNamespace>
+    <AssemblyName>PianoHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Deque.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\Deque\GenericDeque.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\Deque\GenericDeque.Enumerator.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\Deque\GenericDeque.Node.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\Deque\GenericDeque.Synchronized.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\UndoableList\ICommand.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\UndoableList\UndoableList.Commands.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\UndoableList\UndoableList.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\UndoableList\UndoableList.Test.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Generic\UndoableList\UndoManager.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\Array.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\ArrayList.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\AVL Tree Classes\AvlEnumerator.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\AVL Tree Classes\AvlNode.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\AVL Tree Classes\IAvlNode.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\AVL Tree Classes\NullAvlNode.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\RAL Helper Classes\RalEnumerator.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\RAL Helper Classes\RalTopNode.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\RAL Helper Classes\RalTreeNode.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\RandomAccessList.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\SortedList.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\Immutable\Stack.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\PriorityQueue.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Collections\SkipList.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Clocks\IClock.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Clocks\MidiInternalClock.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Clocks\PpqnClock.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.Construction.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.Events.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.Fields.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.Messaging.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.Properties.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.PublicMethods.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\InputDevice.Win32.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\InputDevice Class\MidiInCaps.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\MidiDevice.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\MidiDeviceException.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\MidiHeader.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\MidiHeaderBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\OutputDevice Classes\MidiOutCaps.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\OutputDevice Classes\NoOpEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\OutputDevice Classes\OutputDevice.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\OutputDevice Classes\OutputDeviceBase.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Device Classes\OutputDevice Classes\OutputStream.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\GeneralMidi.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\ChannelMessage.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\ChannelMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\InvalidShortMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\InvalidSysExMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\MetaMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\MidiEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\ShortMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\SysCommonMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\SysExMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\EventArgs\SysRealtimeMessageEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\IMidiMessage.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\ChannelMessageBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\IMessageBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\KeySignatureBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\MetaTextBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\SongPositionPointerBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\SysCommonMessageBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\TempoChangeBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\Message Builders\TimeSignatureBuilder.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\MessageDispatcher.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\MetaMessage.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\MidiEvents\InputDeviceMidiEvents.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\MidiEvents\MergeMidiEvents.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\MidiEvents\MidiEvents.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\MidiEvents\OutputDeviceEventSink.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\ShortMessage.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\SysCommonMessage.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\SysExMessage.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\SysRealtimeMessage.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\MidiNoteConverter.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Processing\ChannelChaser.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Processing\ChannelStopper.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Processing\ChasedEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Processing\StoppedEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\MidiEvent.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\MidiFileProperties.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\RecordingSession.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\Sequence.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\Sequencer.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\Track Classes\Track.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\Track Classes\Track.Iterators.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\Track Classes\Track.Test.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\Track Classes\TrackReader.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Sequencing\Track Classes\TrackWriter.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\DeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\DeviceDialog.Designer.cs">
+      <DependentUpon>DeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\InputDeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\InputDeviceDialog.Designer.cs">
+      <DependentUpon>InputDeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\OutputDeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\OutputDeviceDialog.Designer.cs">
+      <DependentUpon>OutputDeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\PianoControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\PianoControl.PianoKey.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\PianoControlDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\PianoControlDialog.Designer.cs">
+      <DependentUpon>PianoControlDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\PianoKeyEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Timers\ITimer.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Timers\ThreadTimer.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Timers\ThreadTimerQueue.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Timers\Time.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Timers\Timer.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia.Timers\TimerFactory.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia\Device.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia\DeviceException.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia\ErrorEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia\Key.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Multimedia\Note.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Threading\AsyncResult.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Threading\DelegateQueue\DelegateQueue.AsyncResult.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Threading\DelegateQueue\DelegateQueue.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Threading\DelegateQueue\PostCompletedEventArgs.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Threading\DelegateScheduler\DelegateScheduler.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Threading\DelegateScheduler\Task.cs" />
+    <Compile Include="dependencies\Sanford MIDI\Sanford.Threading\InvokeCompletedEventArgs.cs" />
+    <Compile Include="ChordsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChordsWindow.Designer.cs">
+      <DependentUpon>ChordsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScalesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScalesWindow.Designer.cs">
+      <DependentUpon>ScalesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Chord.cs" />
+    <Compile Include="src\Scales.cs" />
+    <Compile Include="src\Settings.cs" />
+    <Compile Include="src\Note.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\DeviceDialog.resx">
+      <DependentUpon>DeviceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\InputDeviceDialog.resx">
+      <DependentUpon>InputDeviceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\OutputDeviceDialog.resx">
+      <DependentUpon>OutputDeviceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\UI\PianoControlDialog.resx">
+      <DependentUpon>PianoControlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChordsWindow.resx">
+      <DependentUpon>ChordsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScalesWindow.resx">
+      <DependentUpon>ScalesWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dependencies\Sanford MIDI\Sanford.Multimedia.Midi\Messages\MessagesHierarchy.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
